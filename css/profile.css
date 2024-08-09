@@ -1,0 +1,214 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+  --main-transition: 0.5s;
+}
+
+.profile-container .overview {
+}
+
+.profile-container .overview .avatar-box {
+  width: 300px;
+}
+
+@media (min-width: 768px) {
+  .profile-container .overview .avatar-box {
+    border-right: 1px solid #eee;
+  }
+}
+
+.profile-container .overview .avatar-box img {
+  width: 120px;
+  height: 120px;
+}
+.profile-container .avatar-box .progress-holder {
+  height: 6px;
+  overflow: hidden;
+  width: 70%;
+  margin: auto;
+}
+
+.profile-container .avatar-box .progress-holder .progress {
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.profile-container .info-box .box {
+  flex-wrap: wrap;
+}
+.profile-container .info-box .box:hover {
+  background-color: #f9f9f9;
+}
+
+.profile-container .info-box .box:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.profile-container .info-box .box h4 {
+  font-weight: normal;
+}
+
+.profile-container .info-box .box > div {
+  min-width: 250px;
+  padding: 10px 0 0;
+}
+
+/* Start Toggle Checkbox */
+
+.profile-container .info-box .box label {
+}
+
+.profile-container .info-box .box input[type="Checkbox"] {
+  appearance: none;
+  display: none;
+}
+
+.profile-container .info-box .box .toggle-switch {
+  width: 78px;
+  --toggle-height: 20px;
+  height: var(--toggle-height);
+  border-radius: calc(var(--toggle-height) / 2);
+  background-color: #ccc;
+  position: relative;
+  -webkit-border-radius: calc(var(--toggle-height) / 2);
+  -moz-border-radius: calc(var(--toggle-height) / 2);
+  -ms-border-radius: calc(var(--toggle-height) / 2);
+  -o-border-radius: calc(var(--toggle-height) / 2);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.profile-container .info-box .box .toggle-switch:before {
+  content: "\f00d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --toggle-w-h: 12px;
+  width: var(--toggle-w-h);
+  height: var(--toggle-w-h);
+  border-radius: 50%;
+  background-color: white;
+  color: #aaa;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  font-size: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.profile-container
+  .info-box
+  .box
+  input[type="Checkbox"]:checked
+  + .toggle-switch {
+  background-color: var(--blue-color);
+}
+
+.profile-container
+  .info-box
+  .box
+  input[type="Checkbox"]:checked
+  + .toggle-switch:before {
+  content: "\f00c";
+  color: var(--blue-color);
+  left: calc(100% - var(--toggle-w-h) - 4px);
+}
+
+/* End Toggle Checkbox */
+
+.profile-container .other-data .skills-card {
+  flex-grow: 1;
+}
+
+.profile-container .other-data .skills-card ul li {
+  padding: 15px 0;
+}
+
+.profile-container .other-data .skills-card ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.profile-container .other-data .skills-card ul li span {
+  display: inline-flex;
+  padding: 4px 10px;
+  background-color: #eee;
+  font-style: 14px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.profile-container .other-data .skills-card ul li span:not(:last-child) {
+  margin-right: 5px;
+}
+
+.profile-container .other-data .activities {
+  flex-grow: 2;
+}
+.profile-container .other-data .activities .activity:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.profile-container .other-data .activities .activity div:last-child {
+  margin-left: auto;
+  text-align: right;
+}
+
+.profile-container .other-data .activities .activity img {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .profile-container .overview {
+    flex-direction: column;
+  }
+
+  .profile-container .info-box .box {
+    justify-content: center;
+  }
+
+  .profile-container .info-box .box .toggle-switch {
+    margin: auto;
+  }
+
+  .profile-container .other-data {
+    flex-direction: column;
+  }
+
+  .profile-container .other-data .activities .activity {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-container .other-data .activities .activity img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .profile-container .other-data .activities .activity div:last-child {
+    margin: 15px auto 0;
+    text-align: center;
+  }
+}

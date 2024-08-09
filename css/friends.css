@@ -1,0 +1,79 @@
+/*Start Variable */
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+  --main-transition: 0.5s;
+}
+/*End  Variable */
+
+/*Start friends */
+
+.friends-container {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.friends-container .friend {
+}
+
+.friends-container .friend .contact {
+  left: 10px;
+  top: 10px;
+}
+
+.friends-container .friend .contact i {
+  padding: 10px;
+  color: #666;
+  background-color: #eee;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  font-size: 13px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.friends-container .friend .contact i:hover {
+  background-color: var(--blue-color);
+  color: #fff;
+}
+
+.friends-container .friend .icons {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.friends-container .friend .icons i {
+  margin-right: 5px;
+}
+
+.friends-container .friend .icons .vip {
+  font-size: 40px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+
+  opacity: 0.2;
+}
+
+/* Small Media*/
+@media (max-width: 767px) {
+  .friends-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+/*End friends */
